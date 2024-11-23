@@ -1257,7 +1257,7 @@ local function AdvDupe2_Spawn()
 		local v = Queue.EntityList[k]
 
 		if (not v.BuildDupeInfo) then v.BuildDupeInfo = {} end
-		if Queue.Revision < 1 and v.LocalPos then
+		if v.LocalPos then
 			for i, _ in pairs(v.PhysicsObjects) do
 				v.PhysicsObjects[i] = {Pos = v.LocalPos, Angle = v.LocalAngle}
 			end
